@@ -21,6 +21,13 @@ def user():
         return render_template('template_1.html',content = "Not Found user id, and id is %s" % inputid)
 
 
+@app.route('/users')
+def users():
+    userss = []
+    for i in range(1,10):
+        userss.append(user_class.User('smnra_'+str(i),i))
+    return render_template('for_index.html',userss=userss)
+
 
 
 @app.route('/select_user')
