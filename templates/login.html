@@ -6,11 +6,13 @@
 </head>
 <body>
     <div agent = "center" name = "login">
-    <h1>用户登陆</h1>
-    {% if message %} {{ message }}{% endif %}
-    <form method="post">
-        用户名: <input type = "text" name ="username" placeholder = "username" /> {% if username %}{{ username}} {% endif %}  </br>
-        密码: <input type = "password" name ="password"  placeholder = "password" /> {% if password %} {{ password }} {% endif %} </br>
+    <h1>用户登陆</h1></br>
+
+    {% if message %} {{ message }}{% endif %} </br>
+
+    <form method="POST">
+        用户名: <input type = "text" name ="username" placeholder = "username" /> </br>
+        密    码: <input type = "password" name ="password"  placeholder = "password" /></br>
         <input type = "reset" value="重置"/>
         <input type = "submit" value="登陆"/>
     </form>
